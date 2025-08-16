@@ -6,8 +6,7 @@
 const modules = [
     {
         nom: "Java",
-        cheminZip: "/Tous_les_semestres/Semestre1.zip/Semestre1/Java.zip" // ZIP pré-généré
-        // OU cheminDossier: "/Tous_les_semestres/S1/Java/" // Alternative
+        cheminZip: "/Tous_les_semestres/Semestre1.zip/Semestre1/Java.zip" /
     },
     {
         nom: "Architecture des proccesseurs",
