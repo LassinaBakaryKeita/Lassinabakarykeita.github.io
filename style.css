@@ -190,6 +190,10 @@ section { /* Espacement entre les sections */
     color:royalblue;
 } 
 
+.couleur1{
+    color:#2157cb;
+}
+
 
 /* === FORM STYLES === */
 form{ /* Style du formulaire principal */
@@ -432,3 +436,4 @@ h4{ /* Style des sous-titres */
     color: #666;
     font-style: italic;
 }
+
