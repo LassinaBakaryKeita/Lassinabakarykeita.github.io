@@ -5,30 +5,133 @@
 body {
     font-family: "Fredoka", sans-serif;
     font-size: 2em ;
-    background-color: rgb(191, 196, 232);
+    background-color: #e4edff;
 }
 
 
-/* === NAVIGATION === */
-.conteneur1{ /* Conteneur principal de la navigation */
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap:10px;
-  
+.header {
+ font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 12%;
+  font-weight: 550;
+  background-color: #e4edff;
+  z-index: 100;
 }
 
-.conteneur1 a { /* Style des liens de navigation */
-    text-decoration: none;      /* enlever le soulignement par défaut */
-    padding: 5px 10px;          /* espace autour du texte */
-    border: 2px solid transparent; /* bordure invisible par défaut */
-    border-radius: 5px;         /* coins légèrement arrondis */
-    transition: all 0.3s ease;  /* transition fluide pour le survol */
+.logo {
+  /* margin: 0 10px 0 50px; */
+  margin: 0 1vw 0 3vw;
+  transition: all 0.2s ease;
 }
 
-.conteneur1 a:hover { /* Effet au survol des liens de navigation */
-    border: 2px solid black;    /* bordure visible au survol */
-    background-color: #f0f0f0;  /* fond clair pour effet bouton */
+.logo-img {
+  /* margin: 3px 0 0 -5px; */
+  margin: 0.5vh 0 0 -1vw;
+  /* width: 25px; */
+  width: 2.2vw;
+  background-color: #0051ff;
+  /* padding: 7px; */
+  padding: 0.5em;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  min-width: 25px;
+}
+
+.logo-img:hover {
+  background-color: #5b8fff;
+}
+
+.ILIA-btn {
+  font-weight: 550;
+  color: white;
+  background-color: #874ce4;
+  /* padding: 8px; */
+  padding: 5em;
+  border-width: 0;
+  border-radius: 20em;
+  /* padding: 14px 20px; */
+  padding: 2.5vh 1.5vw;
+  min-width: 50px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.ILIA-btn:hover {
+  background-color: #e4edff;
+  color: #874ce4;
+  border-color: #874ce4;
+  border-width: 1px;
+}
+
+.header-items {
+  font-size: 100%;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.header-items a {
+  text-decoration: none;
+}
+
+.header-items:hover {
+  /* font-size: 17px; */
+  font-size: 110%;
+}
+
+.accueil {
+  color: #874ce4;
+  transition: color 0.2s;
+}
+
+.ressources {
+  color: #2157cb;
+  transition: color 0.2s;
+}
+
+.club-ilia {
+  color: #874ce4;
+  transition: color 0.2s;
+}
+
+.contact {
+  color: #2157cb;
+  transition: color 0.2s;
+}
+
+.accueil a:visited {
+  color: #874ce4;
+}
+
+.ressources a:visited {
+  color: #2157cb;
+  transition: color 0.2s;
+}
+
+.club-ilia a:visited {
+  color: #874ce4;
+  transition: color 0.2s;
+}
+
+.contact a:visited {
+  color: #2157cb;
+  transition: color 0.2s;
+}
+
+@media (max-width: 600px) {
+  .header-items {
+    font-size: 80%;
+    transition: all 0.2s ease;
+  }
+  .header-items:hover {
+    font-size: 90%;
+  }
 }
 
 
@@ -39,6 +142,7 @@ body {
 }
 
 .cercle { /* Style des éléments circulaires de base */
+    background-color: #e4edff;
     width: 70px;              /* largeur du cercle */
     height: 70px;             /* hauteur du cercle */
     border: 2px solid black;   /* contour du cercle */
@@ -60,9 +164,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10px; /* Ajouter du padding */
+    padding: 0 20px; /* Ajouter du padding */
     box-sizing: border-box; /* Inclure border/padding dans la largeur */
-    font-size: 0.5em; /* Réduire la taille du texte si nécessaire */
+    font-size: 0.4em; /* Réduire la taille du texte si nécessaire */
     white-space: nowrap; /* Empêcher le retour à la ligne */
     overflow: hidden; /* Cacher le débordement */
     text-overflow: ellipsis; /* Ajouter "..." si le texte est trop long */
@@ -99,12 +203,13 @@ body {
 .conteneur2{ /* Conteneur flexible avec espacement */
     margin-top: 10px;
     display:flex;              /* centrer le texte */
-    align-items: center;       /* centrer verticalement */
-    justify-content: center;   /* centrer horizontalement */ 
+   /* align-items: center;        centrer verticalement */
+    justify-content:space-around;  /* centrer horizontalement */ 
     gap:10px;                   /*Espacer les elements du conteneur*/
 }
 
 .rectangle{ /* Style des boutons rectangulaires (version 2) */
+    background-color: #e4edff;
     color: #4a54e1; 
     height:30px;
     width: 100px;
@@ -153,7 +258,7 @@ body {
 
 
 section { /* Espacement entre les sections */
-    margin-bottom: 200px; /* espace de 70px sous chaque section */
+    margin-bottom: 200px; /* espace de 200px sous chaque section */
 }
 
 .conteneur4{ /* Conteneur de formulaire */
@@ -190,12 +295,11 @@ section { /* Espacement entre les sections */
 
 /* === FORM STYLES === */
 form{ /* Style du formulaire principal */
-    background: #ffffff;
     padding: 30px;
     border-radius: 15px;
     max-width: 600px;
     margin: auto;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
 
@@ -240,7 +344,7 @@ form{ /* Style du formulaire principal */
 }
 
 h1, h2 { /* Style des titres avec dégradé */
-     color:blueviolet;
+     color: #2157cb; 
 }
 
 
@@ -358,6 +462,60 @@ h4,.couleur1{ /* Style des sous-titres */
   * { animation: none !important; transition: none !important; }
 }
 
+
+/* Règles générales pour les barres */
+input[type="text"],
+input[type="search"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;          /* occupe toute la largeur du conteneur */
+  max-width: 100%;      /* ne dépasse jamais le parent */
+  padding: 10px;        /* espace intérieur pour que ça respire */
+  margin: 5px 0;        /* espace entre les champs */
+  box-sizing: border-box; /* évite que padding fasse déborder */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Section des SMS (les barres d’options) */
+.sms-section input,
+.sms-section select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Responsivité : petits écrans */
+@media screen and (max-width: 768px) {
+  .search-bar,
+  .section-bar,
+  .options-bar,
+  .document-form input,
+  .document-form textarea {
+    width: 100% !important;   /* force la largeur à 100% */
+    font-size: 14px;          /* texte plus petit */
+  }
+}
+
+/* Responsivité : très petits écrans (téléphones) */
+@media screen and (max-width: 480px) {
+  input,
+  textarea,
+  select {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+
+
+
+
+
+
+
+
 /* === IMAGES === */
 .apropos-image { /* Style de l'image dans la section "A propos" */ 
     display: block;
@@ -365,10 +523,9 @@ h4,.couleur1{ /* Style des sous-titres */
     width: 40%;
     height: 40%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     justify-content: center;
     align-items: center;
-    background-color: white;
 }
 
 .cours-image{  /* Style de l'image dans la section Cours */
@@ -403,7 +560,7 @@ h4,.couleur1{ /* Style des sous-titres */
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 .download-btn { /* Bouton de téléchargement */
@@ -426,5 +583,29 @@ h4,.couleur1{ /* Style des sous-titres */
     text-align: center;
     color: #666;
     font-style: italic;
+}
+
+/* Agrandir le champ texte ( pour sections cours dispoibles et formulaires) */
+#doc-nom,
+#search,
+#filter{
+    width: 400px;   /* largeur */
+    height: 40px;   /* hauteur */
+    font-size: 0.6em; /* taille du texte */
+    padding: 8px;    /* marge interne pour respirer */
+}
+
+/* Agrandir la zone de description (pour la section formulaire) */
+#doc-description{
+    width: 400px;   /* largeur */
+    height: 120px;  /* hauteur */
+    font-size: 0.6em;
+    padding: 8px;
+    resize: vertical; /* l'utilisateur peut étirer seulement en hauteur */
+}
+
+
+main {
+    margin-top: 20%; /* Même valeur que la hauteur de votre header */
 }
 
